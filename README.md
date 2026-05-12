@@ -1,71 +1,104 @@
-# 🎬 MovieIQ - Predictive Analytics on Film Success
+# 🎬 MovieIQ — Predictive Analytics on Film Success
 
-An interactive Streamlit dashboard that analyzes and predicts the success of movies using key performance indicators such as budget, revenue, popularity, runtime, and average votes. Built with Python, this project leverages data visualization, statistical testing, and machine learning (Random Forest) for movie performance insights.
-
----
-
-## 🌐 Live Demo
-
-🚀 [Click here to try the live app](https://movieiq-predictive-analytics-on-film-success-hkz386d9xzv5mygjz.streamlit.app/)
+> A data-driven project that analyzes and predicts movie success using machine learning and exploratory data analysis.
 
 ---
 
-## 📊 Key Features
+## 📁 Project Structure
 
-- 🎯 Predicts whether a movie is likely to be successful (Revenue > Budget)
-- 📈 Visual insights using Seaborn & Matplotlib (Budget vs Revenue, Genre Trends)
-- 📊 T-Test and Chi-Square statistical tests
-- 🤖 Random Forest Classifier for success prediction
-- 🧠 Interactive filtering by genre and vote average via sidebar
-- 🧼 Clean, modular dashboard ready for deployment
-
----
-
-## 🧰 Tech Stack
-
-- **Python** 🐍
-- **Pandas**, **NumPy**
-- **Seaborn**, **Matplotlib**
-- **Scikit-learn**
-- **Streamlit**
-- **SciPy**
+```
+MovieIQ-Predictive-Analytics-on-Film-Success/
+│
+├── assets/                    # Images, plots, and static resources
+├── app.py                     # Main application script (Streamlit / Flask)
+├── MovieIQ_Analysis.ipynb     # Jupyter Notebook — EDA & ML pipeline
+├── movies.csv                 # Raw movie dataset
+├── movies_cleaned.csv         # Preprocessed / cleaned dataset
+├── requirements.txt           # Python dependencies
+└── README.md                  # Project documentation
+```
 
 ---
 
-## 📷 Screenshots
+## 🧠 Project Overview
 
-| Dashboard Overview | Statistical Tests |
-|--------------------|-------------------|
-| ![Dashboard](assets/dashboard.png) | ![Tests](assets/stats_tests.png) |
+**MovieIQ** explores what makes a movie successful by analyzing a dataset of films across various features — budget, popularity, runtime, vote average, and ROI. The project includes:
 
-> Add more screenshots to the `assets/` folder and reference them similarly.
+- 📊 **Exploratory Data Analysis (EDA)** — correlation heatmaps, feature distributions, and trend analysis
+- 🤖 **Predictive Modeling** — ML models to forecast movie success
+- 📈 **Key Insight** — `ROI` has the highest absolute correlation (r = 0.693) with movie success, far ahead of popularity, runtime, budget, and vote average
 
 ---
 
-## 🚀 Run Locally
+## 🔍 Key Features
+
+| Feature        | Correlation with Success (r) |
+|----------------|------------------------------|
+| ROI            | 0.693                        |
+| Popularity     | 0.046                        |
+| Runtime        | 0.035                        |
+| Budget         | 0.032                        |
+| Vote Average   | 0.023                        |
+
+---
+
+## 🚀 Getting Started
 
 ### 1. Clone the repository
+
 ```bash
-git clone https://github.com/nv2105/MovieIQ-Predictive-Analytics-on-Film-Success.git
+git clone https://github.com/YOUR_USERNAME/MovieIQ-Predictive-Analytics-on-Film-Success.git
 cd MovieIQ-Predictive-Analytics-on-Film-Success
- 
 ```
+
 ### 2. Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
-### 3. Run the app
+
+### 3. Run the notebook
+
+Open `MovieIQ_Analysis.ipynb` in Jupyter or VS Code to explore the analysis.
+
+### 4. Launch the app
+
 ```bash
-streamlit run MovieIQ.py
+python app.py
 ```
-## 📁 Dataset
-Make sure the project includes a `movies.csv` file with the following columns:<br>
-` budget, revenue, popularity, runtime, vote_average, title, genres`
-<br>
-## 👨‍💻 Author<br>
-### Naman Vora<br>
-#### Final Year CSE Student | Aspiring Data Analyst<br>
-📫 [LinkedIn](www.linkedin.com/in/namanvora21) • [GitHub](https://github.com/nv2105)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Python 3.14**
+- **Pandas** — data manipulation
+- **Matplotlib / Seaborn** — data visualization
+- **Scikit-learn** — machine learning
+- **Jupyter Notebook** — analysis & EDA
+- **Streamlit / Flask** — web application (`app.py`)
+
+---
+
+## 📌 Future Improvements
+
+- [ ] Add genre-based success segmentation
+- [ ] Incorporate NLP on movie overviews/reviews
+- [ ] Deploy app to Streamlit Cloud or Render
+- [ ] Add model comparison dashboard
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you'd like to change.
+
+---
 
 ## 📄 License
-This project is open source and available under the [MIT License.](https://mit-license.org/) 
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+> Made with ❤️ and data
